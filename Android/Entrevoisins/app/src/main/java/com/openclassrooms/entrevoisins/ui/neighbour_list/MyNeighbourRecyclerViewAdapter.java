@@ -3,7 +3,6 @@ package com.openclassrooms.entrevoisins.ui.neighbour_list;
 import android.content.Context;
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
-import android.support.constraint.Constraints;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,7 +27,6 @@ import butterknife.ButterKnife;
 public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeighbourRecyclerViewAdapter.ViewHolder> {
 
     private final List<Neighbour> mNeighbours;
-    private Context mContext;
 
     public MyNeighbourRecyclerViewAdapter(List<Neighbour> items) {
         mNeighbours = items;
@@ -61,8 +59,9 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
         holder.mNeighbourItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent detailsNeighbourActivity = new Intent(v.getContext(), DetailsNeighbourActivity.class);
-                v.getContext().startActivity(detailsNeighbourActivity);
+                Intent intent = new Intent(v.getContext(), InfosNeighbourActivity.class);
+                intent.putExtra("Neighbour", neighbour);
+                v.getContext().startActivity(intent);
             }
         });
     }
@@ -78,7 +77,6 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
         public TextView mNeighbourName;
         @BindView(R.id.item_list_delete_button)
         public ImageButton mDeleteButton;
-        //connection between click and layout
         @BindView(R.id.item_neighbour)
         public ConstraintLayout mNeighbourItem;
 
