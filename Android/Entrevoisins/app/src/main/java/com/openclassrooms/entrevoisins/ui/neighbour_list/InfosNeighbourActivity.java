@@ -61,7 +61,7 @@ private Neighbour mNeighbour;
     }
 
     public void init(Neighbour neighbour){
-        Glide.with(infoAvatar).load(neighbour.getAvatarUrl()).into(infoAvatar);
+        //display img missing
         avatarName.setText(neighbour.getName());
         infoName.setText(neighbour.getName());
         infoAddress.setText(neighbour.getAddress());
