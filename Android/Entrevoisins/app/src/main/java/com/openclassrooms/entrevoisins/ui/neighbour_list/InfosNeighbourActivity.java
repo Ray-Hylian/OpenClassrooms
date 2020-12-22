@@ -61,7 +61,7 @@ private Neighbour mNeighbour;
     }
 
     public void init(Neighbour neighbour){
-        //display img missing
+        //display img is missing
         avatarName.setText(neighbour.getName());
         infoName.setText(neighbour.getName());
         infoAddress.setText(neighbour.getAddress());
