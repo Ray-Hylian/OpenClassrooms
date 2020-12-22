@@ -8,7 +8,8 @@ import java.util.Objects;
 /**
  * Model object representing a Neighbour
  */
-public class Neighbour implements Parcelable { // add implements Parcelable
+public class Neighbour implements Parcelable {
+
     /** Identifier */
     private long id;
     /** Full name */
@@ -41,42 +42,13 @@ public class Neighbour implements Parcelable { // add implements Parcelable
         this.phoneNumber = phoneNumber;
         this.aboutMe = aboutMe; }
 
-    public long getId() {
-        return id;
-    }
-    public void setId(long id) {
-        this.id = id;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public String getAvatarUrl() {
-        return avatarUrl;
-    }
-    public void setAvatarUrl(String avatarUrl) {
-        this.avatarUrl = avatarUrl;
-    }
-    public String getAddress() {
-        return address;
-    }
-    public void setAddress(String address) {
-        this.address = address;
-    }
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-    public String getAboutMe() {
-        return aboutMe;
-    }
-    public void setAboutMe(String aboutMe) {
-        this.aboutMe = aboutMe;
-    }
+    protected Neighbour(Parcel in) {
+        id = in.readLong();
+        name = in.readString();
+        avatarUrl = in.readString();
+        address = in.readString();
+        phoneNumber = in.readString();
+        aboutMe = in.readString(); }
 
     @Override
     public boolean equals(Object o) {
@@ -86,8 +58,17 @@ public class Neighbour implements Parcelable { // add implements Parcelable
         return Objects.equals(id, neighbour.id); }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(id);
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeLong(id);
+        dest.writeString(name);
+        dest.writeString(avatarUrl);
+        dest.writeString(address);
+        dest.writeString(phoneNumber);
+        dest.writeString(aboutMe); }
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
     public static final Creator<Neighbour> CREATOR = new Creator<Neighbour>() {
@@ -100,25 +81,65 @@ public class Neighbour implements Parcelable { // add implements Parcelable
             return new Neighbour[size];
         }};
 
-    protected Neighbour(Parcel in) {
-        id = in.readLong();
-        name = in.readString();
-        avatarUrl = in.readString();
-        address = in.readString();
-        phoneNumber = in.readString();
-        aboutMe = in.readString(); }
+    public long getId() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
+    }
 
-    @Override
-    public int describeContents() {
-        return 0;
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getAboutMe() {
+        return aboutMe;
+    }
+    public void setAboutMe(String aboutMe) {
+        this.aboutMe = aboutMe;
     }
 
     @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeLong(id);
-        dest.writeString(name);
-        dest.writeString(avatarUrl);
-        dest.writeString(address);
-        dest.writeString(phoneNumber);
-        dest.writeString(aboutMe); }
+    public String toString() {
+        return "Neighbour{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", avatarUrl='" + avatarUrl + '\'' +
+                ", address='" + address + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", aboutMe='" + aboutMe + '\'' +
+                '}';
+    }
+
+
+
+
+
+
+
+
 }
