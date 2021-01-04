@@ -22,25 +22,30 @@ public class Neighbour implements Parcelable {
     private String phoneNumber;
     /** About me */
     private String aboutMe;
+    /** fav or not */
+    private boolean favoriteNeighbour;
+    /** back button */
 
-    //add missing parameters
     /**
-     * Constructor
+     *
      * @param id
      * @param name
      * @param avatarUrl
      * @param address
      * @param phoneNumber
      * @param aboutMe
+     * @param favoriteNeighbour
      */
     public Neighbour(long id, String name, String avatarUrl, String address,
-                     String phoneNumber, String aboutMe) {
+                     String phoneNumber, String aboutMe, boolean favoriteNeighbour) {
         this.id = id;
         this.name = name;
         this.avatarUrl = avatarUrl;
         this.address = address;
         this.phoneNumber = phoneNumber;
-        this.aboutMe = aboutMe; }
+        this.aboutMe = aboutMe;
+        this.favoriteNeighbour = favoriteNeighbour;}
+
 
     protected Neighbour(Parcel in) {
         id = in.readLong();
@@ -48,7 +53,9 @@ public class Neighbour implements Parcelable {
         avatarUrl = in.readString();
         address = in.readString();
         phoneNumber = in.readString();
-        aboutMe = in.readString(); }
+        aboutMe = in.readString();
+        favoriteNeighbour = in.readByte() != 0;}
+
 
     @Override
     public boolean equals(Object o) {
@@ -57,6 +64,7 @@ public class Neighbour implements Parcelable {
         Neighbour neighbour = (Neighbour) o;
         return Objects.equals(id, neighbour.id); }
 
+
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeLong(id);
@@ -64,65 +72,43 @@ public class Neighbour implements Parcelable {
         dest.writeString(avatarUrl);
         dest.writeString(address);
         dest.writeString(phoneNumber);
-        dest.writeString(aboutMe); }
+        dest.writeString(aboutMe);
+        dest.writeByte((byte) (favoriteNeighbour ? 1 : 0));}
+
 
     @Override
-    public int describeContents() {
-        return 0;
-    }
+    public int describeContents() {return 0;}
 
     public static final Creator<Neighbour> CREATOR = new Creator<Neighbour>() {
         @Override
         public Neighbour createFromParcel(Parcel in) {
-            return new Neighbour(in);
-        }
+            return new Neighbour(in);}
         @Override
         public Neighbour[] newArray(int size) {
-            return new Neighbour[size];
-        }};
+            return new Neighbour[size];}};
 
-    public long getId() {
-        return id;
-    }
-    public void setId(long id) {
-        this.id = id;
-    }
 
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
+    public long getId() {return id;}
+    public void setId(long id) {this.id = id;}
 
-    public String getAvatarUrl() {
-        return avatarUrl;
-    }
-    public void setAvatarUrl(String avatarUrl) {
-        this.avatarUrl = avatarUrl;
-    }
+    public String getName() {return name;}
+    public void setName(String name) {this.name = name;}
 
-    public String getAddress() {
-        return address;
-    }
-    public void setAddress(String address) {
-        this.address = address;
-    }
+    public String getAvatarUrl() {return avatarUrl;}
+    public void setAvatarUrl(String avatarUrl) {this.avatarUrl = avatarUrl;}
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+    public String getAddress() {return address;}
+    public void setAddress(String address) {this.address = address;}
 
-    public String getAboutMe() {
-        return aboutMe;
-    }
-    public void setAboutMe(String aboutMe) {
-        this.aboutMe = aboutMe;
-    }
+    public String getPhoneNumber() {return phoneNumber;}
+    public void setPhoneNumber(String phoneNumber) {this.phoneNumber = phoneNumber;}
 
+    public String getAboutMe() {return aboutMe;}
+    public void setAboutMe(String aboutMe) {this.aboutMe = aboutMe;}
+
+    public boolean isFavoriteNeighbour() {return favoriteNeighbour;}
+    public void setFavoriteNeighbour(boolean favoriteStatus) {this.favoriteNeighbour = favoriteStatus;}
+/*
     @Override
     public String toString() {
         return "Neighbour{" +
@@ -132,14 +118,9 @@ public class Neighbour implements Parcelable {
                 ", address='" + address + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", aboutMe='" + aboutMe + '\'' +
+                ", favoriteNeighbour=' " + favoriteNeighbour + '\'' +
                 '}';
     }
 
-
-
-
-
-
-
-
+ */
 }

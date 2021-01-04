@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4c209f07-12c3-48cb-a49b-6da6559cb95e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Entrevoisins/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Entrevoisins/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/model/Neighbour.java" beforeDir="false" afterPath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/model/Neighbour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/service/DummyNeighbourApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/service/DummyNeighbourApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/service/DummyNeighbourGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/service/DummyNeighbourGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/service/NeighbourApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/service/NeighbourApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/ui/neighbour_list/AddNeighbourActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/ui/neighbour_list/AddNeighbourActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/ui/neighbour_list/InfosNeighbourActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/ui/neighbour_list/InfosNeighbourActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/ui/neighbour_list/ListNeighbourPagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/ui/neighbour_list/ListNeighbourPagerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/ui/neighbour_list/NeighbourFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Entrevoisins/app/src/main/java/com/openclassrooms/entrevoisins/ui/neighbour_list/NeighbourFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entrevoisins/app/src/main/res/layout/activity_infos_neighbour.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Entrevoisins/app/src/main/res/layout/activity_infos_neighbour.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entrevoisins/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Entrevoisins/app/src/main/res/values/colors.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1mMv1MvcrMxdqXxOGkUTxw75v6x" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Entrevoisins" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c209f07-12c3-48cb-a49b-6da6559cb95e" name="Default Changelist" comment="" />
+      <created>1609316058812</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609316058812</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="230" y="231" key="FileChooserDialogImpl" timestamp="1609316350173">
+      <screen x="0" y="0" width="1768" height="952" />
+    </state>
+    <state x="230" y="231" key="FileChooserDialogImpl/0.0.1768.952@0.0.1768.952" timestamp="1609316350173" />
+  </component>
+</project>
