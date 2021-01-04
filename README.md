@@ -5,8 +5,8 @@ Entrevoisins by Ray-Hylian
 * lastly : the application is open
 
 How does it work ?
-In this app, the user can add a new neighbour from an existing list and fill differents infos (name, address, phone number, website and a short instruction). It's also possible to convert a neighbour in favorite, who will be displayed in a favorites list.
-Moreover, the user can delete a neighbour or a favorite. 
+* In this app, the user can add a new neighbour from an existing list and fill differents infos (name, address, phone number, website and a short instruction). It's also possible to convert a neighbour in favorite, who will be displayed in a favorites list.
+* Moreover, the user can delete a neighbour or a favorite. 
 
 Successfull tests :
 
